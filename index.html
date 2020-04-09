@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Thales Code</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script>
+        $(function () {           
+            //Validation in Contact
+            $('.form-button').on('click', function () {
+                var email = document.getElementById("email").value;
+                var compname = document.getElementById("companyname").value;
+                var fname = document.getElementById("firstname").value;
+                var lname = document.getElementById("lastname").value;
+
+                if (email != '') {
+                    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    if (!regex.test(email)) {
+                        console.log('false');
+                        $('#email').css("border", "3px solid red");
+                    } else {
+                        console.log('true');
+                        $('#email').css("border", "1px solid #DCE0E8");
+                    }
+                }
+
+                if (compname != '') {
+                    var regex = /^[a-zA-Z ]*$/;
+                    if (!regex.test(compname)) {
+                        console.log('false');
+                        $('#companyname').css("border", "3px solid red");
+                    } else {
+                        console.log('true');
+                        $('#companyname').css("border", "1px solid #DCE0E8");
+                    }
+                }
+
+                if (fname != '') {
+                    var regex = /^[a-zA-Z ]*$/;
+                    if (!regex.test(fname)) {
+                        console.log('false');
+                        $('#firstname').css("border", "3px solid red");
+                    } else {
+                        console.log('true');
+                        $('#firstname').css("border", "1px solid #DCE0E8");
+                    }
+                }
+
+                if (lname != '') {
+                    var regex = /^[a-zA-Z ]*$/;
+                    if (!regex.test(lname)) {
+                        console.log('false');
+                        $('#lastname').css("border", "3px solid red");
+                    } else {
+                        console.log('true');
+                        $('#lastname').css("border", "1px solid #DCE0E8");
+                    }
+                }
+            });
+
+            //On click of Nav in Mobile
+            $('#navline1').on('click', function () {
+                $("#hr-navline1").css('background', '#FFFFFF');
+                $("#hr-navline1").css('opacity', '1');
+                $("#hr-navline2").css('background', '#000000');
+                $("#hr-navline2").css('opacity', '0.1');
+            });
+            $('#navline2').on('click', function () {
+                $("#hr-navline2").css('background', '#FFFFFF');
+                $("#hr-navline2").css('opacity', '1');
+                $("#hr-navline1").css('background', '#000000');
+                $("#hr-navline1").css('opacity', '0.1');
+            });
+            $('.social-icon').on('click', function () {
+                console.log($(this));
+                $(this).siblings().toggle();
+            });
+            $('.nav-icon').on('click', function () {
+                $('.nav-body').toggle();
+            });
+
+            $('.vertical-navbar-bottom').hide();
+            $('.vertical-navbar-top').on('click', function () {
+                $('.vertical-navbar-bottom').toggle();
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="div-1" class="col-xs-12 col-sm-12 col-md-1">
+        <div class="row">
+            <div class="nav-icon col-xs-10 col-sm-10">
+                <span class="span-icon-1">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </span>
+            </div>
+            <div class="nav-body col-md-12">
+                <span class="span-icon-1"><a href="#"><i id="icon-1" class="fas fa-search"></i></a></span></p>
+                <span class="span-icon-1"><a href="#"><i id="icon-1" class="fas fa-share-alt"></i></a></span></p>
+                <span class="span-icon-1"><a href="#"><i id="icon-1" class="fas fa-globe"></i></a></span>
+            </div>
+        </div>
+    </div>
+    <div id="div-2">
+        <!-- Main Header  -->
+        <div id="main-header-section" class="container-fluid">
+            <div id="horizontal-navbar">
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                    <div class="container-fluid">
+                        <h6 class="text-style-23">thales<span style="color:#000000">code</span></h6>
+                        <div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarResponsive1">
+                                <h6 class="text-style-25">ThalesCode<i class="fas fa-caret-right"></i>
+                                <i class="fas fa-caret-right"></i></h6>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarResponsive1">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active  text-style-24">
+                                    <a class="nav-link" href="#">home</a>
+                                </li>
+                                <li class="nav-item  text-style-24">
+                                    <a class="nav-link" href="#">training</a>
+                                </li>
+                                <li class="nav-item  text-style-24">
+                                    <a class="nav-link" href="#">testimonial</a>
+                                </li>
+                                <li class="nav-item  text-style-24">
+                                    <a class="nav-link" href="#">thalesblog</a>
+                                </li>
+                                <li class="nav-item text-style-24">
+                                    <a class="nav-link" href="#">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="left-section">
+                <hr id="main-hr-1">
+                <h5 class="text-style-21">ThalesCode</h5>
+                <h5 id="main-header-1" class="text-style-22">The best way <br>to Learn IT</h5>
+                <h5 id="main-header-2" class="text-style-22">The best way to Learn how to<br> programming online</h5>
+
+                <div id="vertical-navbar">
+                    <div class="vertical-navbar-top">
+                        <text class="text-style-25">ThalesCode&nbsp;&nbsp;<i class="fas fa-caret-right"></i>
+                        &nbsp;&nbsp;
+                        <i class="fas fa-caret-right"></i></text>
+                    </div>
+                    <div class="vertical-navbar-bottom">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link nav-item-2" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item-2" href="#">training</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item-2" href="#">testimonial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item-2" href="#">thalesblog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item-2" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="dev-pc" class="btn form-control form-button-1" type="button">DEVELOPERS</button>
+                &nbsp;&nbsp;
+                <button id="com-pc" class="btn form-control form-button-1" type="button">COMPANIES</button>
+
+                <div class="jumbotron-1">
+                    <h6 class="icon-2">"</h6>
+                    <p class="text-style-26">With ThalesCode you will learn new technologies base on continues development with a flexible schedule, where you can focus and participate with others online, to find more come and join us.</p>
+                </div>
+            </div>
+            <div class="right-section">
+                <img class="bitmap-img-1" src="images/logo.jpg">
+            </div>
+            <a herf="#" id="dev-sm" class="btn">
+                developers
+                <span class="span-icon"><i class="fas fa-angle-right"></i></span>
+            </a>
+            <a herf="#" id="com-sm" class="btn">
+                companies
+                <span class="span-icon"><i class="fas fa-angle-right"></i></span>
+            </a>
+        </div>
+        
+        <!-- About -->
+        <div id="about-section" class="container-fluid">
+            <!-- Header -->
+            <h6 class="sub-header" style="color: #09ACF8;padding-left: 0.3em;">About</h6>
+            <div class="row sub-content-1">
+                <div class="col align-self-center">
+                    <h1 class="text-style-1" style="color: #342A2F;line-height: 29px;">The
+                        Next<br>Recruitment<br>Generation</h1>
+                </div>
+                <div class="col-auto">
+                    <a herf="#" id="ovalbtn2" class="btn btn-md pull-right">read more<span class="span-icon"><i
+                                class="fas fa-angle-right"></i></span></a>
+                </div>
+                <br>
+            </div>
+            <div class="jumbotron">
+                <hr style="margin-left: 0.7em;margin-top: 0em;"><br>
+                <p class="text-style-27">
+                    If you're brand new to the world of coding and web development,
+                    it makes sense to start by teaching yourself using all the free coding resources online.
+                </p>
+                <p class="text-style-27">
+                    We offer you a fun and unique way to learn coding. With a fast-learning program we are based on
+                    challenges using our internal custom tests. Complete them to earn honor and progress to higher
+                    ranks. This is a fun way to learn programming online if you're motivated by a little
+                    gamification! At the end of this program you will be able to get in awesome jobs with latest
+                    technologies in Tokyo.
+                </p>
+            </div>
+
+        </div>
+        
+        <!-- Job Post  -->
+        <div id="job-post-section" class="container-fluid">
+            <!-- Header -->
+            <h6 id="job-post" class="sub-header" style="color: #09ACF8;">JOB POST</h6>
+            <div class="row sub-content-1">
+                <div class="col align-self-center">
+                    <p class="text-style-1" style="color: #342A2F;">Latest Jobs</p>
+                    <p id="motivo-job-post" class="text-style-13">motivo job post</p>
+                </div>
+                <div class="col-auto">
+                    <a herf="#" id="ovalbtn2" class="btn btn-md pull-right">find more<span class="span-icon"><i
+                                class="fas fa-angle-right"></i></span></a>
+                </div>
+            </div>
+            <!-- Slider  -->
+            <div class="col-12">
+
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                        <li data-target="#carousel" data-slide-to="3"></li>
+                        <li data-target="#carousel" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-none d-lg-block">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <div class="slider-box">
+                                    <div class="d-block w-100">
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <div class="slider-box">
+                                    <div class="d-block w-100">
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <div class="slider-box">
+                                    <div class="d-block w-100">
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <div class="slider-box">
+                                    <div class="d-block w-100">
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as Principal
+                                            Software Developer with strong technical...</p>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slider-box">
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                    <div>
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <div class="slider-box">
+                                    <div class="d-block w-100">
+                                        <hr class="short-line-5"><br>
+                                        <h5 class="text-style-2">FullStack Developer</h5>
+                                        <h6 class="text-style-3">6,000,000-8,000,000万円</h6>
+                                        <p class="text-style-4">The candidate in this position will work as 
+                                        Principal Software Developer with strong technical...</p>
+
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">PHP</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">Laravel</button>
+                                        <button type="button" id="ovalbtn1" class="btn btn-sm">AWS</button>
+
+                                        <hr class="line-6">
+
+                                        <a class="social" href="#"><i class="fas fa-suitcase"></i><span
+                                                class="span-icon"><sup>Motivo
+                                                    inc</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-map-marker-alt"></i><span
+                                                class="span-icon"><sup>Shibuya,
+                                                    Tokyo</sup></span></a>
+                                        <a class="social" href="#"><i class="fas fa-clock"></i><span
+                                                class="span-icon"><sup>~10/31</sup></span></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="line-6">
+
+        <!-- New  -->
+        <div id="new-section" class="container-fluid">
+            <div class="row">
+                <div class="col-md-7">
+                    <hr id="main-hr-1"><br>
+                    <h4 class="text-style-28">Get where you're going faster with ThalesCode</h4>
+                    <h6 class="text-style-27">If you're brand new to the world of coding and web development, it makes
+                        sense to start by teaching yourself using all the free coding resources online.</h6>
+                    <h6 class="text-style-27">We offer you a fun and unique way to learn coding. With a fast-learning
+                        program we are based on challenges using our internal custom tests. Complete them to earn honor and progress to
+                        higher ranks. This is a fun way to learn programming online if you're motivated by a little gamification!At
+                        the end of this program you will be able to get in awesome jobs with latest technologies in Tokyo.</h6>
+                    <div class="new-sec-btn">
+                        <a herf="#" id="ovalbtn2" class="btn btn-md">read more<span class="span-icon">
+                        <i class="fas fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/textlogo.png">
+                </div>
+            </div>
+        </div>
+
+        <hr class="line-5">
+
+        <!-- Services  -->
+        <div id="service-section" class="container-fluid">
+            <!-- Header -->
+            <h6 id="services" class="sub-header">Services</h6>
+            <div class="row sub-content-1">
+                <div class="col">
+                    <p id="service1" class="text-style-1">Why they <br />Choose ThalesCode?</p>
+                    <p id="service2" class="text-style-1">Why to choose ThalesCode</p>
+                    <p id="service3" class="text-style-13">why developers choose us</p>
+                </div>
+                <div id="servicebtn1" class="col-auto">
+                    <a herf="#" id="ovalbtn3" class="btn btn-md pull-right">find more<span class="span-icon"><i
+                                class="fas fa-angle-right"></i></span></a>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <!-- Nav pills -->
+            <ul class="nav navlines" role="tablist">
+                <li class="nav-item ml-auto !important nav-item-1">
+                    <a id="navline1" class="active" data-toggle="pill" href="#employers">
+                        Employers
+                        <hr id="hr-navline1" class="short-line-1">
+                    </a>
+                </li>
+                <li class="nav-item mr-auto !important nav-item-1">
+                    <a id="navline2" data-toggle="pill" href="#candidates">
+                        Candidates
+                        <hr id="hr-navline2" class="short-line-1">
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="employers" class="container tab-pane active"><br>
+                    <div id="slides-2" class="carousel slide" data-ride="carousel">
+                        <ul class="carousel-indicators">
+                            <li data-target="#slides-2" data-slide-to="0" class="active"></li>
+                            <li data-target="#slides-2" data-slide-to="1"></li>
+                            <li data-target="#slides-2" data-slide-to="2"></li>
+                            <li data-target="#slides-2" data-slide-to="3"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="row text-center">
+                                <div class="carousel-item active">
+                                    <h4 class="text-style-5">01</h4>
+                                    <hr class="short-line-2">
+                                    <h6 class="text-style-6">IT Training</h6>
+                                    <p class="text-style-7">
+                                        Our team includes people who specialize in IT development and product
+                                        development services who have the experience and knowledge to understand what
+                                        our clients need.
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4 class="text-style-5">02</h4>
+                                    <hr class="short-line-2">
+                                    <h6 class="text-style-6">Global Recruitment</h6>
+                                    <p class="text-style-7">
+                                        We focuses on recruit high skilled engineers with knowledge and experience from
+                                        all around the world, providing qualify candidates who are ready to create
+                                        innovating solutions for businesses.
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4 class="text-style-5">03</h4>
+                                    <hr class="short-line-2">
+                                    <h6 class="text-style-6">HR - HRBP</h6>
+                                    <p class="text-style-7">
+                                        Due to our understanding of technologies, our recruiters not only provide
+                                        candidates to companies but also consulting on how to structure teams to create
+                                        a flexible working environment between Japanese and foreigner engineers.
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4 class="text-style-5">04</h4>
+                                    <hr class="short-line-2">
+                                    <h6 class="text-style-6">LifeCare Support</h6>
+                                    <p class="text-style-7">
+                                        Motivo provides a full relocating package support for candidates who are coming
+                                        from abroad, taking care from their VISAS support, allocation, life setup and
+                                        incorporate themselves into the Japanese culture and community.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slides-3" class="row">
+                        <div class="col-md-3">
+                            <h4 class="text-style-5">01</h4>
+                            <hr class="short-line-2">
+                            <h6 class="text-style-6">IT Training</h6>
+                            <p class="text-style-7">
+                                Our team includes people who specialize in IT development and product
+                                development services who have the experience and knowledge to understand what
+                                our clients need.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-style-5">02</h4>
+                            <hr class="short-line-2">
+                            <h6 class="text-style-6">Global Recruitment</h6>
+                            <p class="text-style-7">
+                                We focuses on recruit high skilled engineers with knowledge and experience from
+                                all around the world, providing qualify candidates who are ready to create
+                                innovating solutions for businesses.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-style-5">03</h4>
+                            <hr class="short-line-2">
+                            <h6 class="text-style-6">HR - HRBP</h6>
+                            <p class="text-style-7">
+                                Due to our understanding of technologies, our recruiters not only provide
+                                candidates to companies but also consulting on how to structure teams to create
+                                a flexible working environment between Japanese and foreigner engineers.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-style-5">04</h4>
+                            <hr class="short-line-2">
+                            <h6 class="text-style-6">LifeCare Support</h6>
+                            <p class="text-style-7">
+                                Motivo provides a full relocating package support for candidates who are coming
+                                from abroad, taking care from their VISAS support, allocation, life setup and
+                                incorporate themselves into the Japanese culture and community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="candidates" class="container tab-pane fade"><br>
+                    <h3>Candidates</h3>
+                </div>
+            </div>
+            <div id="servicebtn2">
+                <a herf="#" id="ovalbtn3" class="btn btn-md">find more<span class="span-icon"><i
+                            class="fas fa-angle-right"></i></span></a>
+            </div>
+        </div>
+        <hr class="line-5">
+
+        <!-- Explore -->
+        <div id="explore-section" class="container-fluid">
+            <!-- Header -->
+            <h6 id="explore" class="sub-header" style="color:#09ACF8;">Explore</h6>
+            <div class="row sub-content-1">
+                <div class="col-md-11">
+                    <h6 id="thales-blog-1" class="text-style-1">Thales Code Blog</he>
+                        <h6 id="thales-blog-2" class="text-style-1">ThalesBlog</h6>
+                        <h6 id="motivo-job-post" class="text-style-13">learn more about latest technologies</h6>
+                </div>
+                <div id="bottom-btn-div" class="col-md-1">
+                    <a herf="#" id="ovalbtn2" class="btn btn-md bottom-btn">find more<span class="span-icon"><i
+                                class="fas fa-angle-right"></i></span></a>
+                </div>
+            </div>
+
+            <!-- Content  -->
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="card">
+                        <img class="card-img" src="images/item4.png">
+                        <div class="card-img-overlay">
+                            <div class="overlay-upper">
+                                <div class="social-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="social-list-1">
+                                    <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-twitter fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-linkedin fa-xs"></i></a></br>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <hr class="short-line-3">
+                                <h6 class="blog-post-1">#TECHNOLOGY</h6>
+                                <h6 class="blog-post-2">2018.10.31</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h6 class="text-style-11">A step-by-step guide to getting started with HTML forms</h6>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-style-8">
+                                    <br><br>
+                                    HTML forms are required when you want to collect some data from the person who visit
+                                    your website. For example, when you register/login for application like
+                                    Uber,Netflix, or Facebook, you enter information like Name,Email and Password
+                                    through HTML forms.
+                                </p>
+                            </div>
+                            <div class="social-list-2">
+                                <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-twitter fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-linkedin fa-xs"></i></a>
+                            </div>
+                            <div class="card-foot">
+                                <p class="text-style-9">by <span class="text-style-10">Fabian Mezarina</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card">
+                        <img class="card-img" src="images/item3.jpg">
+                        <div class="card-img-overlay">
+                            <div class="overlay-upper">
+                                <div class="social-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="social-list-1">
+                                    <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-twitter fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-linkedin fa-xs"></i></a></br>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <hr class="short-line-3">
+                                <h6 class="blog-post-1">#TECHNOLOGY</h6>
+                                <h6 class="blog-post-2">2018.10.31</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h6 class="text-style-11">These common mistakes will lead to immortal bugs. Learn how to avoid them.</h6>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-style-8">
+                                    The question that you or your teammate would ask after the product manager posts a
+                                    snapshot of the bug. This wmap event feels like a Deja Vu...
+                                </p>
+                            </div>
+                            <div class="social-list-2">
+                                <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-twitter fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-linkedin fa-xs"></i></a>
+                            </div>
+                            <div class="card-foot">
+                                <p class="text-style-9">by <span class="text-style-10">Fabian Mezarina</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card">
+                        <img class="card-img" src="images/item2.jpg">
+                        <div class="card-img-overlay">
+                            <div class="overlay-upper">
+                                <div class="social-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="social-list-1">
+                                    <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-twitter fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-linkedin fa-xs"></i></a></br>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <hr class="short-line-3">
+                                <h6 class="blog-post-1">#TECHNOLOGY</h6>
+                                <h6 class="blog-post-2">2018.10.31</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h6 class="text-style-11">How to build a data science project from scratch</h6>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-style-8">
+                                    There are many online courses about data science and machine learning that will
+                                    guide you through a theory and provide you with some code examples and an analysis
+                                    of very clean data. However, in order to start...
+                                </p>
+                            </div>
+                            <div class="social-list-2">
+                                <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-twitter fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-linkedin fa-xs"></i></a>
+                            </div>
+                            <div class="card-foot">
+                                <p class="text-style-9">by <span class="text-style-10">Fabian Mezarina</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card">
+                        <img class="card-img" src="images/item1.jpg">
+                        <div class="card-img-overlay">
+                            <div class="overlay-upper">
+                                <div class="social-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="social-list-1">
+                                    <a href="#"><i class="fab fa-facebook-f  fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-twitter fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a></br>
+                                    <a href="#"><i class="fab fa-linkedin fa-xs"></i></a></br>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <hr class="short-line-3">
+                                <h6 class="blog-post-1">#TECHNOLOGY</h6>
+                                <h6 class="blog-post-2">2018.10.31</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h6 class="text-style-11">How not to be afraid of GIT anymore</h6>
+                            </div>
+                            <div class="card-text">
+                                <p class="text-style-8">
+                                <br>
+                                    Alright, alright, I’m not being too helpful, yet. Here’s the basic idea: As projects
+                                    get too large, with too many contributors, it gets impossible to track who did what
+                                    and when. Did someone introduce a change that broke the entire system? How do you
+                                    figure out what that change was? How do you go back to how things were before? Back
+                                    to the unbroken wonderland?
+                                </p>
+                            </div>
+                            <div class="social-list-2">
+                                <a href="#"><i class="fab fa-facebook-f fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-twitter fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g fa-xs"></i></a>
+                                <a href="#"><i class="fab fa-linkedin fa-xs"></i></a>
+                            </div>
+                            <div class="card-foot">
+                                <p class="text-style-9">by <span class="text-style-10">Fabian Mezarina</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="line-5">
+
+        <!-- Contact -->
+        <div class="contact-section container-fluid">
+            <!-- Header -->
+            <h6 id="contact" class="sub-header" style="color:#09ACF8;padding-left: 0.3em;">Contact</h6>
+            <div class="row">
+                <div class="col-md-6 sub-content-1">
+                    <p class="text-style-12">Thales Code <br>HeadQuarter</p>
+                    <p class="text-style-13">seek for where we are</p>
+                    <hr class="short-line-4">
+                    <br>
+                    <h6>
+                        <strong>
+                            <p class="text-style-14">Meguro-ku, Tokyo Nakameguro 2-8-22<br>Nakameuro TD building 5F
+                            </p>
+                            <p class="text-style-15">CONTACT</p>
+                            <p class="text-style-16">TEL: +81(3)6303 2186<br>Email: info@motivo.jp</p>
+                        </strong>
+                    </h6>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group input-group-lg">
+                        <input type="text" id="companyname" class="form-control text-style-17" placeholder="COMPANY NAME">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <input type="text" id="firstname" class="form-control text-style-17" placeholder="FIRST NAME">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <input type="text" id="lastname" class="form-control text-style-17" placeholder="LAST NAME">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <input type="text" id="email" class="form-control text-style-17" placeholder="EMAIL">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <textarea id="message" class="form-control text-style-17" rows="5"
+                            placeholder="MESSAGE"></textarea>
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <button class="btn btn-lg form-control form-button" type="button">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div id="map-section" class="container-fluid">
+            <img src="images/map2.png" width="100%" height="100%" class="mbmap">
+            <img src="images/map1.png" width="100%" height="100%" class="wmap">
+        </div>
+        <hr class="line-5" style="width: 80%;">
+
+        <!-- Footer -->
+            <div id="footer-section" class="container-fluid">
+                <div class="row">
+                    <div class="footer-1">
+                        <p class="text-style-18">information</p>
+                        <p class="text-style-19">
+                            About us
+                            <br>Companies
+                            <br>Candidates
+                            <br>Internships
+                            <br>Blogs
+                            <br>Testimonials
+                        </p>
+                    </div>
+                    <div class="footer-2">
+                        <p class="text-style-18">partners</p>
+                        <p class="text-style-19">
+                            Company information
+                            <br>Privacy and policy
+                            <br>Disclosure
+                        </p>
+                    </div>
+                    <div class="footer-3">
+                        <p class="text-style-18">subscribe</p>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control text-style-17"
+                                style="text-transform:none;font-size: 11px;" placeholder="Enter you e-mail">
+                        </div>
+                        <br>
+                        <div class="copyright d-flex">
+                            <h6 class="text-style-20 my-auto">&copy; copyright thalescode inc 2019</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
